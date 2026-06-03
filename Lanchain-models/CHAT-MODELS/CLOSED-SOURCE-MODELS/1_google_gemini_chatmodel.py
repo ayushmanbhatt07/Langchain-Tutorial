@@ -1,9 +1,9 @@
-from langchain_google_genai import GoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 import os
 load_dotenv()
-model=GoogleGenerativeAI(model='gemini-2.5-flash')
+model=ChatGoogleGenerativeAI(model='gemini-2.5-flash')
 result=model.invoke("What is the capital of India")
 # print(os.getenv("GOOGLE_API_KEY"))
 # print(result)
-print(result)
+print(result.content)

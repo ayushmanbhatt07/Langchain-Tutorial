@@ -16,7 +16,8 @@ user_input=st.text_input("Enter a topic")
 if user_input:
     prompt=PromptTemplate(
         template='Explain {topic} in very simple words',
-        input_variables=['topic']
+        input_variables=['topic'],
+        validate_template=True # validates the template so if error code is displayed here at localhost only
     )
     st.write("Prompt created")
     st.write(prompt)
